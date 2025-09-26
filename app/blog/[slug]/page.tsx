@@ -12,14 +12,12 @@ export async function generateMetadata({
   return { title: `Post: ${params.slug}` };
 }
 
-export default async function Page({ params }: PageProps) {
-  const parsedParams = await params;
-
+export default async function Page({ params }: any) {
   console.log("parsed params");
 
   return (
     <div>
-      <h1>Slug: {params?.slug}</h1>
+      <h1>Slug: {params.slug}</h1>
       <p>Kiet Huynh</p>
       <p>Welcome to nextJS</p>
     </div>
