@@ -13,6 +13,7 @@ export default function Page({ params }: Params) {
     <div>
       <h1>Slug: {params.slug}</h1>
       <p>Kiet Huynh</p>
+      <p>Welcome to nextJS</p>
     </div>
   );
 }
