@@ -1,14 +1,18 @@
-type Params = {
+import { Metadata } from "next";
+
+type PageProps = {
   params: {
     slug: string;
   };
 };
 
-export async function generateMetadata({ params }: Params) {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   return { title: `Post: ${params.slug}` };
 }
 
-export default function Page({ params }: Params) {
+export default function Page({ params }: PageProps) {
   return (
     <div>
       <h1>Slug: {params.slug}</h1>
